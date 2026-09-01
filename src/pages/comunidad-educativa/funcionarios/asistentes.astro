@@ -1,0 +1,66 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+
+interface Asistente {
+  name: string;
+  role: string;
+}
+
+const asistentes: Asistente[] = [
+  { name: "Rosa Mendoza", role: "Secretaria de Dirección" },
+  { name: "Jessica Paredes", role: "Secretaria Académica" },
+  { name: "Hugo Contreras", role: "Encargado de Finanzas" },
+  { name: "Elena Cifuentes", role: "Asistente Social" },
+  { name: "Mónica Ávila", role: "Psicóloga" },
+  { name: "Claudio Riquelme", role: "Fonoaudiólogo" },
+  { name: "Katherine Morales", role: "Inspectora de Pasillo" },
+  { name: "Ricardo Valenzuela", role: "Inspector de Pasillo" },
+  { name: "Sandra Muñoz", role: "Encargada de Biblioteca CRA" },
+  { name: "Patricio Vega", role: "Encargado de Informática" },
+  { name: "Juan Carlos Sepúlveda", role: "Auxiliar de Mantención" },
+  { name: "Marta Riquelme", role: "Auxiliar de Aseo" },
+  { name: "Ana Henríquez", role: "Auxiliar de Aseo" },
+  { name: "Luis Barrera", role: "Conductor / Auxiliar" },
+];
+---
+
+<Layout title="Asistentes de la Educación - Liceo San José del Carmen">
+  <div class="min-h-screen flex flex-col">
+    <Header currentPath={Astro.url.pathname} />
+    <main class="flex-1">
+      <div class="bg-gradient-to-r from-institutional-blue to-institutional-blue-dark text-white py-16">
+        <div class="max-w-5xl mx-auto px-4">
+          <nav class="text-sm text-white/60 mb-4">
+            <a href="/" class="hover:text-white">Inicio</a>
+            <span class="mx-2">/</span>
+            <span class="text-white/80">Comunidad Educativa</span>
+            <span class="mx-2">/</span>
+            <span class="text-institutional-gold">Asistentes</span>
+          </nav>
+          <h1 class="text-4xl font-bold">Asistentes de la Educación</h1>
+          <p class="text-white/70 mt-2 text-lg">Personal de apoyo fundamental para el funcionamiento del liceo</p>
+        </div>
+      </div>
+      <div class="max-w-5xl mx-auto px-4 py-12">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {asistentes.map((a) => (
+            <div class="flex items-center gap-4 bg-white rounded-xl p-4 shadow-sm border border-gray-200">
+              <div class="w-12 h-12 bg-institutional-gold/20 rounded-full flex items-center justify-center shrink-0">
+                <span class="text-sm font-bold text-institutional-gold-dark">
+                  {a.name.split(" ").map(n => n[0]).slice(0, 2).join("")}
+                </span>
+              </div>
+              <div>
+                <h3 class="font-semibold text-dark text-sm">{a.name}</h3>
+                <p class="text-xs text-gray-600">{a.role}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </div>
+</Layout>

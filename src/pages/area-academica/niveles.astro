@@ -1,0 +1,136 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Niveles - Liceo San José del Carmen">
+  <div class="min-h-screen flex flex-col">
+    <Header currentPath={Astro.url.pathname} />
+    <main class="flex-1">
+      <div class="bg-gradient-to-r from-institutional-blue to-institutional-blue-dark text-white py-16">
+        <div class="max-w-4xl mx-auto px-4">
+          <nav class="text-sm text-white/60 mb-4">
+            <a href="/" class="hover:text-white">Inicio</a>
+            <span class="mx-2">/</span>
+            <span class="text-white/80">Área Académica</span>
+            <span class="mx-2">/</span>
+            <span class="text-institutional-gold">Niveles</span>
+          </nav>
+          <h1 class="text-4xl font-bold">Niveles</h1>
+        </div>
+      </div>
+      <div class="max-w-4xl mx-auto px-4 py-12">
+        <p class="text-lg text-gray-700 leading-relaxed mb-10">
+          El Liceo San José del Carmen ofrece una formación continua desde la Educación Parvularia 
+          hasta la Enseñanza Media, abarcando las siguientes etapas educativas:
+        </p>
+
+        <div class="space-y-6">
+          <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="bg-gradient-to-r from-institutional-blue to-institutional-blue-dark px-6 py-4 flex items-center gap-4">
+              <span class="text-2xl">🌸</span>
+              <div>
+                <h2 class="text-white font-bold text-xl">Educación Parvularia</h2>
+                <p class="text-white/70 text-sm">Niveles: Pre-Kínder y Kínder</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-700 mb-4">
+                Nuestra Educación Parvularia se enfoca en el desarrollo integral de los niños y niñas 
+                a través del juego, la exploración y experiencias de aprendizaje significativas. 
+                Contamos con aulas especialmente acondicionadas y educadoras especializadas.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-institutional-blue/10 text-institutional-blue text-xs font-medium rounded-full">Lenguaje Verbal</span>
+                <span class="px-3 py-1 bg-institutional-blue/10 text-institutional-blue text-xs font-medium rounded-full">Pensamiento Matemático</span>
+                <span class="px-3 py-1 bg-institutional-blue/10 text-institutional-blue text-xs font-medium rounded-full">Exploración del Entorno</span>
+                <span class="px-3 py-1 bg-institutional-blue/10 text-institutional-blue text-xs font-medium rounded-full">Desarrollo Socioemocional</span>
+                <span class="px-3 py-1 bg-institutional-blue/10 text-institutional-blue text-xs font-medium rounded-full">Psicomotricidad</span>
+                <span class="px-3 py-1 bg-institutional-blue/10 text-institutional-blue text-xs font-medium rounded-full">Inglés Inicial</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="bg-gradient-to-r from-institutional-blue to-institutional-blue-dark px-6 py-4 flex items-center gap-4">
+              <span class="text-2xl">📚</span>
+              <div>
+                <h2 class="text-white font-bold text-xl">Educación Básica</h2>
+                <p class="text-white/70 text-sm">1° a 8° Básico</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-700 mb-4">
+                La Educación Básica desarrolla las competencias fundamentales en lenguaje, matemáticas, 
+                ciencias y ciencias sociales, integrando la formación artística, deportiva y valórica. 
+                Implementamos un plan de acompañamiento pedagógico para asegurar los aprendizajes.
+              </p>
+              <div class="grid md:grid-cols-2 gap-4 text-sm">
+                <div>
+                  <p class="font-semibold text-dark mb-2">Primer Ciclo (1° a 4° Básico):</p>
+                  <ul class="space-y-1 text-gray-700">
+                    <li>• Plan Común + Religión</li>
+                    <li>• Inglés desde 1° Básico</li>
+                    <li>• Educación Física y Salud</li>
+                    <li>• Taller de Lectoescritura</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="font-semibold text-dark mb-2">Segundo Ciclo (5° a 8° Básico):</p>
+                  <ul class="space-y-1 text-gray-700">
+                    <li>• Plan Común + Religión</li>
+                    <li>• Inglés y Tecnología</li>
+                    <li>• Talleres JEC (artes, deportes, música)</li>
+                    <li>• Orientación y Convivencia</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="bg-gradient-to-r from-institutional-blue to-institutional-blue-dark px-6 py-4 flex items-center gap-4">
+              <span class="text-2xl">🎓</span>
+              <div>
+                <h2 class="text-white font-bold text-xl">Enseñanza Media</h2>
+                <p class="text-white/70 text-sm">1° a 4° Medio - Científico-Humanista</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-700 mb-4">
+                Ofrecemos Enseñanza Media Científico-Humanista con un plan de estudios que prepara 
+                a nuestros estudiantes para la educación superior y el mundo laboral. Contamos con 
+                preparación PAES, talleres electivos y orientación vocacional.
+              </p>
+              <div class="grid md:grid-cols-2 gap-4 text-sm">
+                <div>
+                  <p class="font-semibold text-dark mb-2">Plan de Formación General:</p>
+                  <ul class="space-y-1 text-gray-700">
+                    <li>• Lenguaje y Comunicación</li>
+                    <li>• Matemática</li>
+                    <li>• Historia y Ciencias Sociales</li>
+                    <li>• Ciencias (Biología, Física, Química)</li>
+                    <li>• Inglés</li>
+                    <li>• Educación Física y Religión</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="font-semibold text-dark mb-2">Plan Electivo (3° y 4°):</p>
+                  <ul class="space-y-1 text-gray-700">
+                    <li>• Electivos de profundización</li>
+                    <li>• Talleres de preparación PAES</li>
+                    <li>• Orientación Vocacional</li>
+                    <li>• Proyecto de Vida</li>
+                    <li>• Formación Ciudadana</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </div>
+</Layout>

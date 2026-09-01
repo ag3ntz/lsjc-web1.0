@@ -1,0 +1,74 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+interface Directivo {
+  name: string;
+  cargo: string;
+}
+
+const directiva: Directivo[] = [
+  { name: "Sra. Carolina Mardones", cargo: "Presidenta" },
+  { name: "Sr. Mario Gálvez", cargo: "Vicepresidente" },
+  { name: "Sra. Patricia Vega", cargo: "Secretaria" },
+  { name: "Sr. Eduardo Rojas", cargo: "Tesorero" },
+  { name: "Sra. Marcela Jara", cargo: "Directora de Comunicaciones" },
+  { name: "Sra. Lorena Faúndez", cargo: "Delegada de Convivencia" },
+];
+---
+
+<Layout title="Centro General de Padres - Liceo San José del Carmen">
+  <div class="min-h-screen flex flex-col">
+    <Header currentPath={Astro.url.pathname} />
+    <main class="flex-1">
+      <div class="bg-gradient-to-r from-institutional-blue to-institutional-blue-dark text-white py-16">
+        <div class="max-w-4xl mx-auto px-4">
+          <nav class="text-sm text-white/60 mb-4">
+            <a href="/" class="hover:text-white">Inicio</a>
+            <span class="mx-2">/</span>
+            <span class="text-white/80">Comunidad Educativa</span>
+            <span class="mx-2">/</span>
+            <span class="text-institutional-gold">Centro de Padres</span>
+          </nav>
+          <h1 class="text-4xl font-bold">Centro General de Padres y Apoderados</h1>
+        </div>
+      </div>
+      <div class="max-w-4xl mx-auto px-4 py-12">
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">
+          El Centro General de Padres y Apoderados (CGPA) del Liceo San José del Carmen es una 
+          organización que representa a las familias de nuestros estudiantes, trabajando 
+          colaborativamente con el equipo directivo y docente para contribuir al mejoramiento 
+          continuo de la calidad educativa.
+        </p>
+
+        <h2 class="text-2xl font-bold text-institutional-blue mb-6">Directiva 2026</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+          {directiva.map((d) => (
+            <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-200">
+              <h3 class="font-bold text-dark">{d.name}</h3>
+              <p class="text-sm text-institutional-gold-dark font-medium">{d.cargo}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="space-y-6">
+          <div class="bg-gray-light rounded-xl p-6">
+            <h3 class="text-lg font-bold text-institutional-blue mb-3">Nuestros Objetivos</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-start gap-2">• <span>Fortalecer la comunicación y colaboración entre el hogar y el liceo.</span></li>
+              <li class="flex items-start gap-2">• <span>Apoyar las actividades educativas, culturales y deportivas del establecimiento.</span></li>
+              <li class="flex items-start gap-2">• <span>Contribuir al mejoramiento de la infraestructura y recursos del liceo.</span></li>
+              <li class="flex items-start gap-2">• <span>Promover la participación activa de las familias en la comunidad educativa.</span></li>
+            </ul>
+          </div>
+          <div class="bg-institutional-gold/10 border border-institutional-gold/30 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-institutional-blue mb-2">Reuniones</h3>
+            <p class="text-gray-700">Las reuniones del CGPA se realizan el primer miércoles de cada mes a las 18:30 hrs en las dependencias del liceo. ¡Todas las familias están cordialmente invitadas a participar!</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </div>
+</Layout>

@@ -1,0 +1,79 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+interface Documento {
+  titulo: string;
+  descripcion: string;
+  categoria: string;
+}
+
+const documentos: Documento[] = [
+  { titulo: "Proyecto Educativo Institucional (PEI)", descripcion: "Documento que define la identidad, principios y metas del establecimiento.", categoria: "Gestión" },
+  { titulo: "Reglamento de Convivencia Escolar", descripcion: "Normas y procedimientos para la sana convivencia de la comunidad educativa.", categoria: "Convivencia" },
+  { titulo: "Reglamento de Evaluación y Promoción", descripcion: "Criterios y procedimientos de evaluación académica.", categoria: "Académico" },
+  { titulo: "Plan de Mejoramiento Educativo (PME)", descripcion: "Planificación estratégica para el mejoramiento de la calidad educativa.", categoria: "Gestión" },
+  { titulo: "Protocolo de Prevención del Acoso Escolar", descripcion: "Procedimientos para prevenir y abordar situaciones de acoso escolar.", categoria: "Convivencia" },
+  { titulo: "Plan de Formación Ciudadana", descripcion: "Programa de formación en ciudadanía, derechos y deberes.", categoria: "Académico" },
+  { titulo: "Plan de Sexualidad y Afectividad", descripcion: "Orientaciones para la educación en sexualidad y afectividad.", categoria: "Académico" },
+  { titulo: "Manual de Procedimientos COVID-19", descripcion: "Protocolos sanitarios vigentes para la comunidad educativa.", categoria: "Salud" },
+  { titulo: "Calendario Escolar 2026", descripcion: "Calendario oficial con fechas relevantes del año académico.", categoria: "Académico" },
+  { titulo: "Solicitud de Matrícula 2027", descripcion: "Formulario de solicitud de matrícula para nuevos estudiantes.", categoria: "Matrícula" },
+];
+---
+
+<Layout title="Documentos - Liceo San José del Carmen">
+  <div class="min-h-screen flex flex-col">
+    <Header currentPath={Astro.url.pathname} />
+    <main class="flex-1">
+      <div class="bg-gradient-to-r from-institutional-blue to-institutional-blue-dark text-white py-16">
+        <div class="max-w-4xl mx-auto px-4">
+          <nav class="text-sm text-white/60 mb-4">
+            <a href="/" class="hover:text-white">Inicio</a>
+            <span class="mx-2">/</span>
+            <span class="text-white/80">Área Académica</span>
+            <span class="mx-2">/</span>
+            <span class="text-institutional-gold">Documentos</span>
+          </nav>
+          <h1 class="text-4xl font-bold">Documentos del Establecimiento</h1>
+        </div>
+      </div>
+      <div class="max-w-4xl mx-auto px-4 py-12">
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">
+          Accede a los documentos oficiales del Liceo San José del Carmen. Estos documentos 
+          están disponibles para toda la comunidad educativa.
+        </p>
+
+        <div class="space-y-3">
+          {documentos.map((d) => (
+            <div class="flex items-center gap-4 bg-white rounded-xl p-4 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+              <div class="w-10 h-10 bg-institutional-blue/10 rounded-lg flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-institutional-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <h3 class="font-semibold text-dark text-sm">{d.titulo}</h3>
+                <p class="text-xs text-gray-500 truncate">{d.descripcion}</p>
+              </div>
+              <span class="text-xs font-medium px-2.5 py-1 bg-institutional-blue/10 text-institutional-blue rounded-full shrink-0">{d.categoria}</span>
+              <button class="shrink-0 px-3 py-1.5 bg-institutional-blue text-white text-xs font-medium rounded-lg hover:bg-institutional-blue-dark transition-colors">
+                <span class="flex items-center gap-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                  PDF
+                </span>
+              </button>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-8 bg-institutional-gold/10 border border-institutional-gold/30 rounded-xl p-6 text-center">
+          <p class="text-sm text-gray-700">
+            ¿No encuentras lo que buscas? Solicita los documentos en secretaría o escribe a 
+            <a href="mailto:contacto@liceosanjose.cl" class="text-institutional-blue underline">contacto@liceosanjose.cl</a>
+          </p>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </div>
+</Layout>

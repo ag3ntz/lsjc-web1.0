@@ -1,0 +1,70 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Historia - Liceo San José del Carmen">
+  <div class="min-h-screen flex flex-col">
+    <Header currentPath={Astro.url.pathname} />
+    <main class="flex-1">
+      <div class="bg-gradient-to-r from-institutional-blue to-institutional-blue-dark text-white py-16">
+        <div class="max-w-4xl mx-auto px-4">
+          <nav class="text-sm text-white/60 mb-4">
+            <a href="/" class="hover:text-white">Inicio</a>
+            <span class="mx-2">/</span>
+            <span class="text-white/80">El Liceo</span>
+            <span class="mx-2">/</span>
+            <span class="text-institutional-gold">Historia</span>
+          </nav>
+          <h1 class="text-4xl font-bold">Historia</h1>
+        </div>
+      </div>
+      <div class="max-w-4xl mx-auto px-4 py-12">
+        <div class="relative pl-8 border-l-4 border-institutional-gold space-y-10">
+          <div class="relative">
+            <div class="absolute -left-[2.35rem] top-0 w-6 h-6 bg-institutional-gold rounded-full border-4 border-white"></div>
+            <p class="text-sm text-institutional-blue font-bold">1926</p>
+            <h3 class="text-lg font-bold text-dark mt-1">Fundación</h3>
+            <p class="text-gray-700 mt-2">📖 El origen del actual Liceo San José del Carmen se remonta a una pequeña escuela particular 
+              que funcionaba frente al actual Museo Histórico de San José del Carmen, brindando educación a los niños y niñas del sector 
+              rural del Valle del Huique.</p>
+          </div>
+
+          <div class="relative">
+            <div class="absolute -left-[2.35rem] top-0 w-6 h-6 bg-institutional-gold rounded-full border-4 border-white"></div>
+            <p class="text-sm text-institutional-blue font-bold">1928</p>
+            <h3 class="text-lg font-bold text-dark mt-1">Nacimiento de la Escuela Publica</h3>
+            <p class="text-gray-700 mt-2">La escuela particular es transformada oficialmente en la Escuela Pública N.º 55, incorporándose 
+              al sistema educacional del Estado y sentando las bases para su futuro desarrollo.</p>
+          </div>
+
+          <div class="relative">
+            <div class="absolute -left-[2.35rem] top-0 w-6 h-6 bg-institutional-gold rounded-full border-4 border-white"></div>
+            <p class="text-sm text-institutional-blue font-bold">1929</p>
+            <h3 class="text-lg font-bold text-dark mt-1">Primeros Avances</h3>
+            <p class="text-gray-700 mt-2">La Escuela N.º 55 es elevada a la categoría de Segunda Clase. Ese mismo año se implementa el primer 
+              servicio de almuerzo escolar, una iniciativa que permitió mejorar la asistencia y permanencia de los estudiantes.</p>
+          </div>
+
+          <div class="relative">
+            <div class="absolute -left-[2.35rem] top-0 w-6 h-6 bg-institutional-gold rounded-full border-4 border-white"></div>
+            <p class="text-sm text-institutional-blue font-bold">1939</p>
+            <h3 class="text-lg font-bold text-dark mt-1">Mejoras para la Comunidad Escolar</h3>
+            <p class="text-gray-700 mt-2">Bajo la dirección de Inés Castro Osorio se impulsan importantes mejoras en infraestructura, incluyendo 
+              nuevas salas de clases, mejores patios y espacios más adecuados para el aprendizaje.</p>
+          </div>
+          <div class="relative">
+            <div class="absolute -left-[2.35rem] top-0 w-6 h-6 bg-institutional-gold rounded-full border-4 border-white"></div>
+            <p class="text-sm text-institutional-blue font-bold">2026</p>
+            <h3 class="text-lg font-bold text-dark mt-1">Actualidad</h3>
+            <p class="text-gray-700 mt-2">Actualmente el Liceo San José del Carmen cuenta con más de 
+            800 estudiantes distribuidos en Educación Parvularia, Educación Básica y Enseñanza Media, 
+            consolidándose como un referente educativo en la región.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </div>
+</Layout>

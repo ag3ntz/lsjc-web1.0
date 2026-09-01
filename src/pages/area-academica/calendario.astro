@@ -1,0 +1,96 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+interface Evento {
+  fecha: string;
+  evento: string;
+  tipo: "importante" | "academico" | "actividad";
+}
+
+const eventos: Evento[] = [
+  { fecha: "05 de marzo", evento: "Inicio del Año Escolar 2026", tipo: "importante" },
+  { fecha: "15 de abril", evento: "Primera reunión de apoderados", tipo: "actividad" },
+  { fecha: "28 de abril - 09 de mayo", evento: "Vacaciones de Otoño", tipo: "importante" },
+  { fecha: "21 de mayo", evento: "Celebración Día de las Glorias Navales", tipo: "actividad" },
+  { fecha: "07 de julio - 18 de julio", evento: "Vacaciones de Invierno", tipo: "importante" },
+  { fecha: "Agosto", evento: "Semana de la Educación Artística", tipo: "actividad" },
+  { fecha: "15 - 17 de septiembre", evento: "Celebración Fiestas Patrias", tipo: "actividad" },
+  { fecha: "06 - 10 de octubre", evento: "Semana del Liceo", tipo: "actividad" },
+  { fecha: "27 de octubre - 07 de noviembre", evento: "Evaluaciones Semestrales 2° Semestre", tipo: "academico" },
+  { fecha: "Noviembre", evento: "Ceremonia de Licenciatura 4° Medios", tipo: "importante" },
+  { fecha: "Diciembre", evento: "Término del Año Escolar", tipo: "importante" },
+];
+---
+
+<Layout title="Calendario Escolar - Liceo San José del Carmen">
+  <div class="min-h-screen flex flex-col">
+    <Header currentPath={Astro.url.pathname} />
+    <main class="flex-1">
+      <div class="bg-gradient-to-r from-institutional-blue to-institutional-blue-dark text-white py-16">
+        <div class="max-w-4xl mx-auto px-4">
+          <nav class="text-sm text-white/60 mb-4">
+            <a href="/" class="hover:text-white">Inicio</a>
+            <span class="mx-2">/</span>
+            <span class="text-white/80">Área Académica</span>
+            <span class="mx-2">/</span>
+            <span class="text-institutional-gold">Calendario</span>
+          </nav>
+          <h1 class="text-4xl font-bold">Calendario Escolar 2026</h1>
+        </div>
+      </div>
+      <div class="max-w-4xl mx-auto px-4 py-12">
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">
+          Calendario anual con las principales fechas y actividades del establecimiento. 
+          Este calendario puede estar sujeto a modificaciones, las cuales serán comunicadas 
+          oportunamente a la comunidad educativa.
+        </p>
+
+        <div class="space-y-3">
+          {eventos.map((e) => (
+            <div class={`flex items-center gap-4 bg-white rounded-xl p-4 shadow-sm border-l-4 ${
+              e.tipo === "importante" ? "border-l-institutional-blue" :
+              e.tipo === "academico" ? "border-l-institutional-gold" :
+              "border-l-gray-400"
+            }`}>
+              <div class="min-w-[120px]">
+                <span class={`text-sm font-semibold ${
+                  e.tipo === "importante" ? "text-institutional-blue" :
+                  e.tipo === "academico" ? "text-institutional-gold-dark" :
+                  "text-gray-600"
+                }`}>{e.fecha}</span>
+              </div>
+              <div class="flex-1">
+                <p class="text-dark font-medium">{e.evento}</p>
+              </div>
+              <span class={`text-xs font-medium px-2.5 py-1 rounded-full ${
+                e.tipo === "importante" ? "bg-institutional-blue/10 text-institutional-blue" :
+                e.tipo === "academico" ? "bg-institutional-gold/20 text-institutional-gold-dark" :
+                "bg-gray-100 text-gray-600"
+              }`}>
+                {e.tipo === "importante" ? "Importante" : e.tipo === "academico" ? "Académico" : "Actividad"}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-8 flex items-center justify-center gap-6 text-sm">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 bg-institutional-blue rounded-full"></span>
+            <span class="text-gray-600">Fechas importantes</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 bg-institutional-gold rounded-full"></span>
+            <span class="text-gray-600">Evaluaciones</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 bg-gray-400 rounded-full"></span>
+            <span class="text-gray-600">Actividades</span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </div>
+</Layout>

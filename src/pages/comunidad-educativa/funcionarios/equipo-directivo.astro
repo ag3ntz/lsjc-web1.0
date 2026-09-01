@@ -1,0 +1,61 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+
+interface Funcionario {
+  name: string;
+  role: string;
+  description: string;
+}
+
+const equipo: Funcionario[] = [
+  { name: "María Elena González", role: "Directora", description: "Profesora de Educación General Básica, Magíster en Gestión Educacional. 25 años de experiencia en el sistema escolar." },
+  { name: "Carlos Andrés Muñoz", role: "Jefe de Unidad Técnico Pedagógica (UTP)", description: "Profesor de Matemáticas, Magíster en Currículum y Evaluación. 18 años de trayectoria." },
+  { name: "Paola Andrea Soto", role: "Inspectora General", description: "Asistente Social, Diplomada en Convivencia Escolar. 15 años en el establecimiento." },
+  { name: "Luis Alberto Martínez", role: "Subdirector de Enseñanza Media", description: "Profesor de Lenguaje, Magíster en Liderazgo Educativo. 12 años de experiencia." },
+  { name: "Carmen Luz Rojas", role: "Subdirectora de Enseñanza Básica", description: "Educadora de Párvulos, Especialista en Educación Inicial. 20 años de servicio." },
+  { name: "Felipe Andrés Torres", role: "Encargado de Convivencia Escolar", description: "Psicólogo, Diplomado en Mediación Escolar. 8 años en el cargo." },
+];
+---
+
+<Layout title="Equipo Directivo - Liceo San José del Carmen">
+  <div class="min-h-screen flex flex-col">
+    <Header currentPath={Astro.url.pathname} />
+    <main class="flex-1">
+      <div class="bg-gradient-to-r from-institutional-blue to-institutional-blue-dark text-white py-16">
+        <div class="max-w-5xl mx-auto px-4">
+          <nav class="text-sm text-white/60 mb-4">
+            <a href="/" class="hover:text-white">Inicio</a>
+            <span class="mx-2">/</span>
+            <span class="text-white/80">Comunidad Educativa</span>
+            <span class="mx-2">/</span>
+            <span class="text-institutional-gold">Equipo Directivo</span>
+          </nav>
+          <h1 class="text-4xl font-bold">Equipo Directivo</h1>
+          <p class="text-white/70 mt-2 text-lg">Conoce a quienes lideran nuestra comunidad educativa</p>
+        </div>
+      </div>
+      <div class="max-w-5xl mx-auto px-4 py-12">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {equipo.map((persona) => (
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
+              <div class="bg-gradient-to-br from-institutional-blue to-institutional-blue-dark h-2"></div>
+              <div class="p-6">
+                <div class="w-16 h-16 bg-institutional-gold/20 rounded-full flex items-center justify-center mb-4">
+                  <span class="text-xl font-bold text-institutional-gold-dark">
+                    {persona.name.split(" ").map(n => n[0]).slice(0, 2).join("")}
+                  </span>
+                </div>
+                <h3 class="text-lg font-bold text-dark">{persona.name}</h3>
+                <p class="text-sm font-semibold text-institutional-gold-dark mb-3">{persona.role}</p>
+                <p class="text-sm text-gray-600">{persona.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </div>
+</Layout>

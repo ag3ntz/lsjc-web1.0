@@ -1,0 +1,80 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Reglamento Interno - Liceo San José del Carmen">
+  <div class="min-h-screen flex flex-col">
+    <Header currentPath={Astro.url.pathname} />
+    <main class="flex-1">
+      <div class="bg-gradient-to-r from-institutional-blue to-institutional-blue-dark text-white py-16">
+        <div class="max-w-4xl mx-auto px-4">
+          <nav class="text-sm text-white/60 mb-4">
+            <a href="/" class="hover:text-white">Inicio</a>
+            <span class="mx-2">/</span>
+            <span class="text-white/80">El Liceo</span>
+            <span class="mx-2">/</span>
+            <span class="text-institutional-gold">Reglamento Interno</span>
+          </nav>
+          <h1 class="text-4xl font-bold">Reglamento Interno</h1>
+        </div>
+      </div>
+      <div class="max-w-4xl mx-auto px-4 py-12">
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">
+          El Reglamento Interno del Liceo San José del Carmen establece las normas y procedimientos 
+          que regulan la convivencia escolar, los derechos y deberes de los integrantes de la 
+          comunidad educativa, y los protocolos de actuación frente a diversas situaciones.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <a href="#" class="flex items-center gap-4 bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-200">
+            <div class="w-12 h-12 bg-institutional-blue/10 rounded-lg flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-institutional-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-dark">Reglamento de Convivencia Escolar</h3>
+              <p class="text-sm text-gray-500">PDF - 2.3 MB</p>
+            </div>
+          </a>
+          <a href="#" class="flex items-center gap-4 bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-200">
+            <div class="w-12 h-12 bg-institutional-blue/10 rounded-lg flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-institutional-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-dark">Reglamento de Evaluación</h3>
+              <p class="text-sm text-gray-500">PDF - 1.8 MB</p>
+            </div>
+          </a>
+          <a href="#" class="flex items-center gap-4 bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-200">
+            <div class="w-12 h-12 bg-institutional-blue/10 rounded-lg flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-institutional-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-dark">Protocolo de Prevención del Acoso Escolar</h3>
+              <p class="text-sm text-gray-500">PDF - 1.2 MB</p>
+            </div>
+          </a>
+          <a href="#" class="flex items-center gap-4 bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-200">
+            <div class="w-12 h-12 bg-institutional-blue/10 rounded-lg flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-institutional-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-dark">Plan de Gestión de la Convivencia</h3>
+              <p class="text-sm text-gray-500">PDF - 1.5 MB</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="bg-institutional-gold/10 border border-institutional-gold/30 rounded-xl p-6">
+          <p class="text-sm text-gray-700">
+            <strong>¿Necesitas más información?</strong> Si tienes dudas sobre el reglamento interno, 
+            puedes consultar en la secretaría del liceo o escribir a 
+            <a href="mailto:contacto@liceosanjose.cl" class="text-institutional-blue underline">contacto@liceosanjose.cl</a>
+          </p>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </div>
+</Layout>

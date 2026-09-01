@@ -1,0 +1,83 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Misión y Visión - Liceo San José del Carmen">
+  <div class="min-h-screen flex flex-col">
+    <Header currentPath={Astro.url.pathname} />
+    <main class="flex-1">
+      <div class="bg-gradient-to-r from-institutional-blue to-institutional-blue-dark text-white py-16">
+        <div class="max-w-4xl mx-auto px-4">
+          <nav class="text-sm text-white/60 mb-4">
+            <a href="/" class="hover:text-white">Inicio</a>
+            <span class="mx-2">/</span>
+            <span class="text-white/80">El Liceo</span>
+            <span class="mx-2">/</span>
+            <span class="text-institutional-gold">Misión y Visión</span>
+          </nav>
+          <h1 class="text-4xl font-bold">Misión y Visión</h1>
+        </div>
+      </div>
+      <div class="max-w-4xl mx-auto px-4 py-12">
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-institutional-gold">
+            <div class="w-14 h-14 bg-institutional-gold/20 rounded-xl flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-institutional-gold-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            </div>
+            <h2 class="text-2xl font-bold text-institutional-blue mb-4">Misión</h2>
+            <p class="text-gray-700 leading-relaxed">
+              Somos una comunidad educativa que acoge, forma y acompaña a niños, niñas y jóvenes 
+              en su desarrollo integral, promoviendo la excelencia académica, la formación en valores 
+              cristianos, el pensamiento crítico y el compromiso social. Buscamos desarrollar personas 
+              íntegras, autónomas y solidarias, capaces de enfrentar los desafíos del mundo actual 
+              con responsabilidad y esperanza.
+            </p>
+          </div>
+          <div class="bg-white rounded-xl p-8 shadow-sm border-t-4 border-institutional-blue">
+            <div class="w-14 h-14 bg-institutional-blue/10 rounded-xl flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-institutional-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+            </div>
+            <h2 class="text-2xl font-bold text-institutional-blue mb-4">Visión</h2>
+            <p class="text-gray-700 leading-relaxed">
+              Aspiramos a ser una institución educativa líder en la región, reconocida por su 
+              calidad académica, su innovación pedagógica y su sólida formación en valores. 
+              Queremos ser un espacio donde cada estudiante descubra y desarrolle sus talentos, 
+              construya su proyecto de vida y se prepare para contribuir activamente a una 
+              sociedad más justa, inclusiva y fraterna.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-gray-light rounded-xl p-8">
+          <h2 class="text-2xl font-bold text-institutional-blue mb-6 text-center">Nuestros Valores</h2>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="text-center">
+              <div class="w-12 h-12 bg-institutional-blue rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+              </div>
+              <h3 class="font-bold text-dark">Solidaridad</h3>
+              <p class="text-sm text-gray-600 mt-1">Compromiso con el prójimo y la comunidad</p>
+            </div>
+            <div class="text-center">
+              <div class="w-12 h-12 bg-institutional-blue rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+              </div>
+              <h3 class="font-bold text-dark">Excelencia</h3>
+              <p class="text-sm text-gray-600 mt-1">Búsqueda constante de la calidad educativa</p>
+            </div>
+            <div class="text-center">
+              <div class="w-12 h-12 bg-institutional-blue rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+              </div>
+              <h3 class="font-bold text-dark">Respeto</h3>
+              <p class="text-sm text-gray-600 mt-1">Valoración de la dignidad de cada persona</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </div>
+</Layout>

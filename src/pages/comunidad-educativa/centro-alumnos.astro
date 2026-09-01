@@ -1,0 +1,97 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+interface Directivo {
+  name: string;
+  cargo: string;
+  curso: string;
+}
+
+const directiva: Directivo[] = [
+  { name: "Vicente Alonso Silva", cargo: "Presidente", curso: "4° Medio A" },
+  { name: "Emilia Agustina Vega", cargo: "Vicepresidenta", curso: "3° Medio B" },
+  { name: "Martín Felipe Rojas", cargo: "Secretario", curso: "3° Medio A" },
+  { name: "Isidora Paz Muñoz", cargo: "Tesorera", curso: "4° Medio B" },
+  { name: "Joaquín Esteban Lara", cargo: "Delegado de Cultura", curso: "2° Medio A" },
+  { name: "Antonia Belén Cáceres", cargo: "Delegada de Deportes", curso: "2° Medio B" },
+  { name: "Nicolás Andrés Pino", cargo: "Delegado de Comunicaciones", curso: "3° Medio A" },
+];
+---
+
+<Layout title="Centro de Alumnos - Liceo San José del Carmen">
+  <div class="min-h-screen flex flex-col">
+    <Header currentPath={Astro.url.pathname} />
+    <main class="flex-1">
+      <div class="bg-gradient-to-r from-institutional-blue to-institutional-blue-dark text-white py-16">
+        <div class="max-w-4xl mx-auto px-4">
+          <nav class="text-sm text-white/60 mb-4">
+            <a href="/" class="hover:text-white">Inicio</a>
+            <span class="mx-2">/</span>
+            <span class="text-white/80">Comunidad Educativa</span>
+            <span class="mx-2">/</span>
+            <span class="text-institutional-gold">Centro de Alumnos</span>
+          </nav>
+          <h1 class="text-4xl font-bold">Centro de Alumnos</h1>
+        </div>
+      </div>
+      <div class="max-w-4xl mx-auto px-4 py-12">
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">
+          El Centro de Alumnos (CEAL) del Liceo San José del Carmen es la organización representativa 
+          del estudiantado, elegida democráticamente para velar por los derechos e intereses de los 
+          alumnos, promover la participación y organizar actividades que enriquezcan la vida escolar.
+        </p>
+
+        <h2 class="text-2xl font-bold text-institutional-blue mb-6">Directiva CEAL 2026</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+          {directiva.map((d) => (
+            <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:border-institutional-gold/50 transition-colors">
+              <h3 class="font-bold text-dark">{d.name}</h3>
+              <p class="text-sm font-semibold text-institutional-gold-dark">{d.cargo}</p>
+              <p class="text-xs text-gray-500">{d.curso}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="bg-gray-light rounded-xl p-6">
+          <h3 class="text-lg font-bold text-institutional-blue mb-3">Nuestro Trabajo</h3>
+          <div class="grid md:grid-cols-2 gap-4 text-gray-700">
+            <div class="flex items-start gap-2">
+              <span class="text-institutional-gold-dark mt-1">★</span>
+              <span>Organización de eventos escolares (día del alumno, celebraciones patrias, etc.)</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-institutional-gold-dark mt-1">★</span>
+              <span>Representación del estudiantado ante el consejo escolar</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-institutional-gold-dark mt-1">★</span>
+              <span>Proyectos de mejoramiento de espacios comunes</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-institutional-gold-dark mt-1">★</span>
+              <span>Actividades de recaudación para la gira de estudios</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-institutional-gold-dark mt-1">★</span>
+              <span>Talleres y actividades extracurriculares</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-institutional-gold-dark mt-1">★</span>
+              <span>Campañas solidarias y de concienciación</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-8">
+          <p class="text-sm text-gray-500">
+            ¿Tienes ideas o sugerencias? Acércate a algún miembro de la directiva o escríbenos a 
+            <a href="mailto:ceal@liceosanjose.cl" class="text-institutional-blue underline">ceal@liceosanjose.cl</a>
+          </p>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </div>
+</Layout>

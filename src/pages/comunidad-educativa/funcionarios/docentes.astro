@@ -1,0 +1,69 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+
+interface Docente {
+  name: string;
+  area: string;
+  asignatura: string;
+}
+
+const docentes: Docente[] = [
+  { name: "Ana María Flores", area: "Lenguaje y Comunicación", asignatura: "Lenguaje" },
+  { name: "Roberto Andrade", area: "Matemáticas", asignatura: "Matemática" },
+  { name: "Claudia Vergara", area: "Ciencias Naturales", asignatura: "Ciencias" },
+  { name: "Patricio Leiva", area: "Historia y Geografía", asignatura: "Historia" },
+  { name: "María Angélica Peña", area: "Inglés", asignatura: "Inglés" },
+  { name: "Jorge Gutiérrez", area: "Educación Física", asignatura: "Educación Física" },
+  { name: "Daniela Espinoza", area: "Artes Visuales", asignatura: "Artes" },
+  { name: "Cristián Navarro", area: "Música", asignatura: "Música" },
+  { name: "Paula Sanhueza", area: "Religión", asignatura: "Religión" },
+  { name: "Marcelo Cárdenas", area: "Tecnología", asignatura: "Tecnología" },
+  { name: "Verónica Bustos", area: "Educación Diferencial", asignatura: "PIE" },
+  { name: "Francisco Vidal", area: "Ciencias Sociales", asignatura: "Filosofía" },
+];
+---
+
+<Layout title="Docentes - Liceo San José del Carmen">
+  <div class="min-h-screen flex flex-col">
+    <Header currentPath={Astro.url.pathname} />
+    <main class="flex-1">
+      <div class="bg-gradient-to-r from-institutional-blue to-institutional-blue-dark text-white py-16">
+        <div class="max-w-5xl mx-auto px-4">
+          <nav class="text-sm text-white/60 mb-4">
+            <a href="/" class="hover:text-white">Inicio</a>
+            <span class="mx-2">/</span>
+            <span class="text-white/80">Comunidad Educativa</span>
+            <span class="mx-2">/</span>
+            <span class="text-institutional-gold">Docentes</span>
+          </nav>
+          <h1 class="text-4xl font-bold">Docentes</h1>
+          <p class="text-white/70 mt-2 text-lg">Cuerpo docente del Liceo San José del Carmen</p>
+        </div>
+      </div>
+      <div class="max-w-5xl mx-auto px-4 py-12">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {docentes.map((d) => (
+            <div class="flex items-center gap-4 bg-white rounded-xl p-4 shadow-sm border border-gray-200 hover:border-institutional-gold/50 transition-colors">
+              <div class="w-12 h-12 bg-institutional-blue/10 rounded-full flex items-center justify-center shrink-0">
+                <span class="text-sm font-bold text-institutional-blue">
+                  {d.name.split(" ").map(n => n[0]).slice(0, 2).join("")}
+                </span>
+              </div>
+              <div class="min-w-0">
+                <h3 class="font-semibold text-dark text-sm truncate">{d.name}</h3>
+                <p class="text-xs text-institutional-gold-dark">{d.asignatura}</p>
+                <p class="text-xs text-gray-500">{d.area}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <p class="text-sm text-gray-500 mt-8 text-center">
+          Listado referencial. Para conocer la planta docente completa, consulte en la secretaría del establecimiento.
+        </p>
+      </div>
+    </main>
+    <Footer />
+  </div>
+</Layout>

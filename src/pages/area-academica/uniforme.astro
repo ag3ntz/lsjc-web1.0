@@ -1,0 +1,120 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Uniforme - Liceo San José del Carmen">
+  <div class="min-h-screen flex flex-col">
+    <Header currentPath={Astro.url.pathname} />
+    <main class="flex-1">
+      <div class="bg-gradient-to-r from-institutional-blue to-institutional-blue-dark text-white py-16">
+        <div class="max-w-4xl mx-auto px-4">
+          <nav class="text-sm text-white/60 mb-4">
+            <a href="/" class="hover:text-white">Inicio</a>
+            <span class="mx-2">/</span>
+            <span class="text-white/80">Área Académica</span>
+            <span class="mx-2">/</span>
+            <span class="text-institutional-gold">Uniforme</span>
+          </nav>
+          <h1 class="text-4xl font-bold">Uniforme</h1>
+        </div>
+      </div>
+      <div class="max-w-4xl mx-auto px-4 py-12">
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">
+          El uniforme del Liceo San José del Carmen es un símbolo de identidad y pertenencia 
+          a nuestra comunidad educativa. A continuación, se detallan las prendas reglamentarias 
+          para cada nivel.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-10">
+          <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="bg-institutional-blue px-6 py-3">
+              <h2 class="text-white font-bold text-lg">Educación Básica</h2>
+            </div>
+            <div class="p-6 space-y-3 text-sm text-gray-700">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 bg-institutional-gold rounded-full shrink-0"></span>
+                <span>Pantalón gris escolar (dama y varón)</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 bg-institutional-gold rounded-full shrink-0"></span>
+                <span>Polera blanca con cuello y logo del liceo bordado</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 bg-institutional-gold rounded-full shrink-0"></span>
+                <span>Jockey o chaleco azul institucional con logo</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 bg-institutional-gold rounded-full shrink-0"></span>
+                <span>Zapatos negros de colegio (sin zapatillas)</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 bg-institutional-gold rounded-full shrink-0"></span>
+                <span>Calcetas o pantys grises</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="bg-institutional-blue-dark px-6 py-3">
+              <h2 class="text-white font-bold text-lg">Enseñanza Media</h2>
+            </div>
+            <div class="p-6 space-y-3 text-sm text-gray-700">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 bg-institutional-gold rounded-full shrink-0"></span>
+                <span>Pantalón gris oscuro (dama y varón)</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 bg-institutional-gold rounded-full shrink-0"></span>
+                <span>Polera blanca con cuarto manga, logo institucional bordado</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 bg-institutional-gold rounded-full shrink-0"></span>
+                <span>Sweater azul institucional (cuello V)</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 bg-institutional-gold rounded-full shrink-0"></span>
+                <span>Zapatos negros de colegio</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 bg-institutional-gold rounded-full shrink-0"></span>
+                <span>Calcetas o pantys grises / negros</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-6">
+          <h3 class="text-lg font-bold text-institutional-blue mb-2">Uniforme de Educación Física</h3>
+          <div class="grid md:grid-cols-2 gap-4 text-sm text-gray-700">
+            <div>
+              <p class="font-medium text-dark mb-1">Varones:</p>
+              <ul class="space-y-1">
+                <li>• Buzo azul institucional</li>
+                <li>• Polera blanca del liceo</li>
+                <li>• Short azul institucional</li>
+                <li>• Zapatillas deportivas</li>
+              </ul>
+            </div>
+            <div>
+              <p class="font-medium text-dark mb-1">Damas:</p>
+              <ul class="space-y-1">
+                <li>• Buzo azul institucional</li>
+                <li>• Polera blanca del liceo</li>
+                <li>• Calzas o short azul institucional</li>
+                <li>• Zapatillas deportivas</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 text-sm text-gray-500">
+          <p><strong>Importante:</strong> Todas las prendas deben estar claramente marcadas con el nombre del estudiante. 
+          El uniforme se puede adquirir en la tienda oficial del liceo o en los establecimientos autorizados.</p>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </div>
+</Layout>

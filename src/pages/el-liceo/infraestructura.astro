@@ -1,0 +1,78 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Infraestructura - Liceo San José del Carmen">
+  <div class="min-h-screen flex flex-col">
+    <Header currentPath={Astro.url.pathname} />
+    <main class="flex-1">
+      <div class="bg-gradient-to-r from-institutional-blue to-institutional-blue-dark text-white py-16">
+        <div class="max-w-4xl mx-auto px-4">
+          <nav class="text-sm text-white/60 mb-4">
+            <a href="/" class="hover:text-white">Inicio</a>
+            <span class="mx-2">/</span>
+            <span class="text-white/80">El Liceo</span>
+            <span class="mx-2">/</span>
+            <span class="text-institutional-gold">Infraestructura</span>
+          </nav>
+          <h1 class="text-4xl font-bold">Infraestructura</h1>
+        </div>
+      </div>
+      <div class="max-w-4xl mx-auto px-4 py-12">
+        <p class="text-lg text-gray-700 leading-relaxed mb-10">
+          Nuestro liceo cuenta con modernas instalaciones diseñadas para brindar un entorno 
+          educativo seguro, acogedor y funcional, que favorece el aprendizaje y el desarrollo 
+          integral de nuestros estudiantes.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+            <div class="w-12 h-12 bg-institutional-gold/20 rounded-lg flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-institutional-gold-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+            </div>
+            <h3 class="font-bold text-dark mb-2">Aulas Modernas</h3>
+            <p class="text-gray-600 text-sm">24 salas de clases equipadas con data show, pizarras interactivas y mobiliario ergonómico.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+            <div class="w-12 h-12 bg-institutional-gold/20 rounded-lg flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-institutional-gold-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+            </div>
+            <h3 class="font-bold text-dark mb-2">Laboratorios</h3>
+            <p class="text-gray-600 text-sm">Laboratorio de Ciencias (Física, Química y Biología) y Laboratorio de Computación con 30 equipos.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+            <div class="w-12 h-12 bg-institutional-gold/20 rounded-lg flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-institutional-gold-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+            </div>
+            <h3 class="font-bold text-dark mb-2">Biblioteca CRA</h3>
+            <p class="text-gray-600 text-sm">Centro de Recursos para el Aprendizaje con más de 5.000 volúmenes, zona de estudio y acceso a internet.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+            <div class="w-12 h-12 bg-institutional-gold/20 rounded-lg flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-institutional-gold-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+            </div>
+            <h3 class="font-bold text-dark mb-2">Patio y Áreas Verdes</h3>
+            <p class="text-gray-600 text-sm">Amplio patio con zonas de sombra, multicancha deportiva y jardines que embellecen el entorno.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+            <div class="w-12 h-12 bg-institutional-gold/20 rounded-lg flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-institutional-gold-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" /></svg>
+            </div>
+            <h3 class="font-bold text-dark mb-2">Sala de Música y Artes</h3>
+            <p class="text-gray-600 text-sm">Espacio equipado con instrumentos musicales y materiales para el desarrollo artístico.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+            <div class="w-12 h-12 bg-institutional-gold/20 rounded-lg flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-institutional-gold-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M3 14h18" /></svg>
+            </div>
+            <h3 class="font-bold text-dark mb-2">Comedor y Casino</h3>
+            <p class="text-gray-600 text-sm">Espacio amplio y acogedor para la alimentación de estudiantes y funcionarios.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </div>
+</Layout>

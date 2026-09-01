@@ -1,0 +1,101 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+interface Noticia {
+  titulo: string;
+  resumen: string;
+  fecha: string;
+  categoria: string;
+  slug: string;
+}
+
+const noticias: Noticia[] = [
+  {
+    titulo: "Estudiantes del Liceo participan en Feria de Ciencias Regional",
+    resumen: "Con proyectos innovadores en energías renovables y robótica, nuestros estudiantes representaron al liceo en la Feria Regional de Ciencias, obteniendo destacadas menciones.",
+    fecha: "28 de mayo, 2026",
+    categoria: "Académico",
+    slug: "feria-ciencias-2026",
+  },
+  {
+    titulo: "Ceremonia de Abanderamiento 2026",
+    resumen: "En una emotiva ceremonia, se realizó el abanderamiento de los nuevos abanderados que representarán al liceo durante el año escolar 2026.",
+    fecha: "15 de mayo, 2026",
+    categoria: "Actividades",
+    slug: "abanderamiento-2026",
+  },
+  {
+    titulo: "Jornada de Puertas Abiertas 2026",
+    resumen: "Invitamos a toda la comunidad a conocer nuestras instalaciones y proyecto educativo en la Jornada de Puertas Abiertas que se realizará en junio.",
+    fecha: "10 de mayo, 2026",
+    categoria: "Admisión",
+    slug: "puertas-abiertas-2026",
+  },
+  {
+    titulo: "Selección de Fútbol del Liceo clasifica a torneo regional",
+    resumen: "Nuestra selección de fútbol masculina y femenina clasificaron a la etapa regional de los Juegos Escolares 2026.",
+    fecha: "2 de mayo, 2026",
+    categoria: "Deportes",
+    slug: "seleccion-futbol-2026",
+  },
+  {
+    titulo: "Talleres Extraprogramáticos 2026",
+    resumen: "Ya están disponibles los talleres extraprogramáticos para este año: música, danza, teatro, robótica, ajedrez y más. Revisa los horarios e inscríbete.",
+    fecha: "25 de abril, 2026",
+    categoria: "Actividades",
+    slug: "talleres-extraprogramaticos-2026",
+  },
+  {
+    titulo: "Resultados PAES 2025",
+    resumen: "Felicitamos a nuestros estudiantes de 4° Medio 2025 por los excelentes resultados obtenidos en la PAES, destacando puntajes sobre los 900 puntos.",
+    fecha: "10 de abril, 2026",
+    categoria: "Académico",
+    slug: "resultados-paes-2025",
+  },
+];
+---
+
+<Layout title="Noticias - Liceo San José del Carmen">
+  <div class="min-h-screen flex flex-col">
+    <Header currentPath={Astro.url.pathname} />
+    <main class="flex-1">
+      <div class="bg-gradient-to-r from-institutional-blue to-institutional-blue-dark text-white py-16">
+        <div class="max-w-5xl mx-auto px-4">
+          <nav class="text-sm text-white/60 mb-4">
+            <a href="/" class="hover:text-white">Inicio</a>
+            <span class="mx-2">/</span>
+            <span class="text-institutional-gold">Noticias</span>
+          </nav>
+          <h1 class="text-4xl font-bold">Noticias</h1>
+          <p class="text-white/70 mt-2 text-lg">Entérate de las últimas novedades del Liceo San José del Carmen</p>
+        </div>
+      </div>
+      <div class="max-w-5xl mx-auto px-4 py-12">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {noticias.map((n) => (
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow group flex flex-col">
+              <div class="h-40 bg-gradient-to-br from-institutional-blue to-institutional-blue-dark flex items-center justify-center">
+                <span class="text-5xl opacity-30">📰</span>
+              </div>
+              <div class="p-5 flex flex-col flex-1">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="text-xs font-medium px-2.5 py-1 bg-institutional-gold/20 text-institutional-gold-dark rounded-full">{n.categoria}</span>
+                  <span class="text-xs text-gray-400">{n.fecha}</span>
+                </div>
+                <h2 class="text-lg font-bold text-dark mb-2 group-hover:text-institutional-blue transition-colors">{n.titulo}</h2>
+                <p class="text-sm text-gray-600 leading-relaxed flex-1">{n.resumen}</p>
+                <a href={`/noticias/${n.slug}`} class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-institutional-blue hover:text-institutional-blue-dark transition-colors">
+                  Leer más
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </div>
+</Layout>

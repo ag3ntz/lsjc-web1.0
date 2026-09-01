@@ -1,0 +1,169 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Inicio - Liceo San José del Carmen">
+  <div class="min-h-screen flex flex-col">
+    <Header currentPath={Astro.url.pathname} />
+
+    <main class="flex-1">
+      <!-- Hero / Slider -->
+      <section class="relative bg-gradient-to-br from-institutional-blue via-institutional-blue to-institutional-blue-dark text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-[0.07]">
+          <div class="absolute top-5 left-5 w-96 h-96 bg-institutional-gold rounded-full blur-3xl"></div>
+          <div class="absolute -bottom-20 -right-20 w-[500px] h-[500px] bg-blue-400 rounded-full blur-3xl"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 py-24 md:py-32">
+          <div class="max-w-3xl">
+            <span class="inline-block px-3 py-1 bg-institutional-gold/20 text-institutional-gold text-sm font-medium rounded-full mb-6">Año Escolar 2026</span>
+            <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+              Bienvenidos al<br />
+              <span class="text-institutional-gold">Liceo San José del Carmen</span>
+            </h2>
+            <p class="text-lg md:text-xl text-white/80 mb-8 max-w-2xl">
+              Institución educativa comprometida con la formación integral de niños, niñas y jóvenes, 
+              promoviendo la excelencia académica, los valores cristianos y el desarrollo de una 
+              comunidad inclusiva y solidaria.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="/el-liceo/nuestro-liceo" class="inline-flex items-center gap-2 bg-institutional-gold text-institutional-blue-dark font-bold px-6 py-3 rounded-lg hover:bg-institutional-gold-light transition-colors shadow-lg shadow-institutional-gold/25">
+                Conócenos
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+              </a>
+              <a href="/contacto" class="inline-flex items-center gap-2 border-2 border-white/30 text-white font-semibold px-6 py-3 rounded-lg hover:bg-white/10 transition-colors">
+                Contáctanos
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Slide indicators -->
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+          <span class="w-8 h-2 bg-institutional-gold rounded-full"></span>
+          <span class="w-2 h-2 bg-white/40 rounded-full"></span>
+          <span class="w-2 h-2 bg-white/40 rounded-full"></span>
+        </div>
+      </section>
+
+      <!-- Cards de acceso rápido -->
+      <section class="py-16 bg-gray-light">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="text-center mb-12">
+            <h3 class="text-2xl md:text-3xl font-bold text-institutional-blue mb-3">Nuestra Institución</h3>
+            <p class="text-gray-600">Conoce los pilares de nuestra comunidad educativa</p>
+          </div>
+          <div class="grid md:grid-cols-3 gap-8">
+            <a href="/el-liceo/proyecto-educativo" class="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all border border-gray-100 hover:border-institutional-gold/30">
+              <div class="w-14 h-14 bg-institutional-gold/20 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-institutional-gold-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+              </div>
+              <h4 class="text-xl font-bold text-institutional-blue mb-3">Proyecto Educativo</h4>
+              <p class="text-gray-600 leading-relaxed">Descubre nuestro modelo educativo basado en la excelencia académica, la innovación pedagógica y la formación en valores cristianos.</p>
+            </a>
+            <a href="/comunidad-educativa/funcionarios/equipo-directivo" class="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all border border-gray-100 hover:border-institutional-gold/30">
+              <div class="w-14 h-14 bg-institutional-gold/20 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-institutional-gold-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+              </div>
+              <h4 class="text-xl font-bold text-institutional-blue mb-3">Comunidad Educativa</h4>
+              <p class="text-gray-600 leading-relaxed">Conoce a nuestro equipo directivo, docentes y asistentes que trabajan día a día por una educación de calidad.</p>
+            </a>
+            <a href="/area-academica/niveles" class="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all border border-gray-100 hover:border-institutional-gold/30">
+              <div class="w-14 h-14 bg-institutional-gold/20 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-institutional-gold-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+              </div>
+              <h4 class="text-xl font-bold text-institutional-blue mb-3">Niveles Educativos</h4>
+              <p class="text-gray-600 leading-relaxed">Ofrecemos Educación Parvularia, Básica y Enseñanza Media Científico-Humanista con un enfoque integral.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Noticias destacadas -->
+      <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="flex items-center justify-between mb-10">
+            <div>
+              <h3 class="text-2xl md:text-3xl font-bold text-institutional-blue">Últimas Noticias</h3>
+              <p class="text-gray-600 mt-1">Entérate de lo que está pasando en nuestro liceo</p>
+            </div>
+            <a href="/noticias" class="hidden sm:inline-flex items-center gap-1 text-institutional-blue font-medium hover:text-institutional-blue-dark transition-colors">
+              Ver todas
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+            </a>
+          </div>
+          <div class="grid md:grid-cols-3 gap-6">
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow group">
+              <div class="h-40 bg-gradient-to-br from-institutional-blue to-institutional-blue-dark flex items-center justify-center">
+                <span class="text-5xl opacity-30">🔬</span>
+              </div>
+              <div class="p-5">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="text-xs font-medium px-2.5 py-1 bg-institutional-gold/20 text-institutional-gold-dark rounded-full">Académico</span>
+                  <span class="text-xs text-gray-400">28 mayo 2026</span>
+                </div>
+                <h4 class="font-bold text-dark mb-2 group-hover:text-institutional-blue transition-colors">Feria de Ciencias Regional</h4>
+                <p class="text-sm text-gray-600 line-clamp-2">Estudiantes participaron con proyectos innovadores obteniendo destacadas menciones.</p>
+              </div>
+            </article>
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow group">
+              <div class="h-40 bg-gradient-to-br from-institutional-blue to-institutional-blue-dark flex items-center justify-center">
+                <span class="text-5xl opacity-30">🏆</span>
+              </div>
+              <div class="p-5">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="text-xs font-medium px-2.5 py-1 bg-institutional-gold/20 text-institutional-gold-dark rounded-full">Actividades</span>
+                  <span class="text-xs text-gray-400">15 mayo 2026</span>
+                </div>
+                <h4 class="font-bold text-dark mb-2 group-hover:text-institutional-blue transition-colors">Ceremonia de Abanderamiento</h4>
+                <p class="text-sm text-gray-600 line-clamp-2">Se realizó la emotiva ceremonia de abanderamiento para el año escolar 2026.</p>
+              </div>
+            </article>
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow group">
+              <div class="h-40 bg-gradient-to-br from-institutional-blue to-institutional-blue-dark flex items-center justify-center">
+                <span class="text-5xl opacity-30">⚽</span>
+              </div>
+              <div class="p-5">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="text-xs font-medium px-2.5 py-1 bg-institutional-gold/20 text-institutional-gold-dark rounded-full">Deportes</span>
+                  <span class="text-xs text-gray-400">2 mayo 2026</span>
+                </div>
+                <h4 class="font-bold text-dark mb-2 group-hover:text-institutional-blue transition-colors">Selección clasifica a regional</h4>
+                <p class="text-sm text-gray-600 line-clamp-2">Nuestra selección de fútbol clasificó a la etapa regional de los Juegos Escolares.</p>
+              </div>
+            </article>
+          </div>
+          <div class="text-center mt-8 sm:hidden">
+            <a href="/noticias" class="inline-flex items-center gap-1 text-institutional-blue font-medium">Ver todas las noticias <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Estadísticas -->
+      <section class="py-16 bg-institutional-blue text-white">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="grid md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div class="text-4xl font-extrabold text-institutional-gold mb-2">+90</div>
+              <p class="text-white/80 text-sm font-medium">Años de Historia</p>
+            </div>
+            <div>
+              <div class="text-4xl font-extrabold text-institutional-gold mb-2">+500</div>
+              <p class="text-white/80 text-sm font-medium">Estudiantes</p>
+            </div>
+            <div>
+              <div class="text-4xl font-extrabold text-institutional-gold mb-2">+50</div>
+              <p class="text-white/80 text-sm font-medium">Docentes</p>
+            </div>
+            <div>
+              <div class="text-4xl font-extrabold text-institutional-gold mb-2">4</div>
+              <p class="text-white/80 text-sm font-medium">Niveles Educativos</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+  </div>
+</Layout>

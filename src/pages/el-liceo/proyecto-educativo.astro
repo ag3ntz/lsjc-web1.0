@@ -1,0 +1,79 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Proyecto Educativo Institucional - Liceo San José del Carmen">
+  <div class="min-h-screen flex flex-col">
+    <Header currentPath={Astro.url.pathname} />
+    <main class="flex-1">
+      <div class="bg-gradient-to-r from-institutional-blue to-institutional-blue-dark text-white py-16">
+        <div class="max-w-4xl mx-auto px-4">
+          <nav class="text-sm text-white/60 mb-4">
+            <a href="/" class="hover:text-white">Inicio</a>
+            <span class="mx-2">/</span>
+            <span class="text-white/80">El Liceo</span>
+            <span class="mx-2">/</span>
+            <span class="text-institutional-gold">Proyecto Educativo</span>
+          </nav>
+          <h1 class="text-4xl font-bold">Proyecto Educativo Institucional</h1>
+        </div>
+      </div>
+      <div class="max-w-4xl mx-auto px-4 py-12">
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">
+          El Proyecto Educativo Institucional (PEI) del Liceo San José del Carmen es el instrumento 
+          que orienta y da sentido a nuestra labor educativa. Define nuestra identidad, nuestros 
+          principios y las metas que nos proponemos alcanzar como comunidad educativa.
+        </p>
+
+        <div class="space-y-8">
+          <div class="bg-white rounded-xl p-8 shadow-sm border-l-4 border-institutional-gold">
+            <h2 class="text-xl font-bold text-institutional-blue mb-3">Fundamentos Filosóficos</h2>
+            <p class="text-gray-700 leading-relaxed">
+              Nuestro proyecto se fundamenta en una concepción humanista cristiana del ser humano, 
+              valorando su dignidad trascendente y su capacidad de desarrollo integral. Promovemos 
+              una educación inclusiva que respeta la diversidad y fomenta la participación activa 
+              de todos los miembros de la comunidad educativa.
+            </p>
+          </div>
+          <div class="bg-white rounded-xl p-8 shadow-sm border-l-4 border-institutional-gold">
+            <h2 class="text-xl font-bold text-institutional-blue mb-3">Fundamentos Pedagógicos</h2>
+            <p class="text-gray-700 leading-relaxed">
+              Adoptamos un enfoque constructivista del aprendizaje, donde el estudiante es el 
+              protagonista de su propio proceso de aprendizaje. Fomentamos el desarrollo de 
+              habilidades del siglo XXI: pensamiento crítico, creatividad, colaboración y 
+              comunicación efectiva. Implementamos metodologías activas y evaluación formativa.
+            </p>
+          </div>
+          <div class="bg-white rounded-xl p-8 shadow-sm border-l-4 border-institutional-gold">
+            <h2 class="text-xl font-bold text-institutional-blue mb-3">Objetivos Estratégicos</h2>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start gap-3">
+                <span class="text-institutional-gold-dark mt-1">✓</span>
+                <span>Fortalecer la calidad de los aprendizajes en todas las áreas del currículum nacional.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-institutional-gold-dark mt-1">✓</span>
+                <span>Desarrollar un clima escolar positivo basado en el respeto, la inclusión y la sana convivencia.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-institutional-gold-dark mt-1">✓</span>
+                <span>Promover la formación integral mediante actividades artísticas, deportivas y espirituales.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-institutional-gold-dark mt-1">✓</span>
+                <span>Fortalecer la alianza familia-escuela como pilar fundamental del proceso educativo.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-institutional-gold-dark mt-1">✓</span>
+                <span>Innovar en prácticas pedagógicas incorporando tecnologías y metodologías activas.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </div>
+</Layout>

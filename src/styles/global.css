@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-institutional-blue: #0033CC;
+  --color-institutional-blue-dark: #002299;
+  --color-institutional-blue-light: #0044EE;
+  --color-institutional-gold: #EED000;
+  --color-institutional-gold-dark: #CCA800;
+  --color-institutional-gold-light: #FFE033;
+  --color-dark: #1A1A1A;
+  --color-gray-light: #F5F5F5;
+  --font-family-sans: 'Inter', 'Segoe UI', Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-sans);
+  color: var(--color-dark);
+}

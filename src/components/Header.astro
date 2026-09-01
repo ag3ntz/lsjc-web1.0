@@ -1,0 +1,83 @@
+---
+export interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = '' } = Astro.props;
+---
+
+<header class="bg-institutional-blue text-white sticky top-0 z-50 shadow-lg">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3">
+      <img src="/logo.png" alt="Liceo San José del Carmen" class="h-14 w-auto" />
+      <div class="hidden sm:block">
+        <h1 class="text-lg font-bold leading-tight">Liceo San José del Carmen</h1>
+        <p class="text-xs text-institutional-gold font-medium">Educación con Excelencia</p>
+      </div>
+    </a>
+
+    <button id="menu-toggle" class="lg:hidden p-2 hover:bg-white/10 rounded-lg transition-colors" aria-label="Abrir menú">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+    </button>
+
+    <nav class="hidden lg:flex items-center gap-1 text-sm font-medium">
+      <a href="/" class={`px-3 py-2 rounded-lg hover:bg-white/10 transition-colors ${currentPath === '/' ? 'text-institutional-gold' : ''}`}>Inicio</a>
+
+      <div class="relative group">
+        <button class="px-3 py-2 rounded-lg hover:bg-white/10 transition-colors flex items-center gap-1">
+          El Liceo
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
+        </button>
+        <div class="absolute top-full left-0 mt-1 w-56 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 overflow-hidden">
+          <div class="py-1">
+            <a href="/el-liceo/nuestro-liceo" class="block px-4 py-2.5 text-sm text-dark hover:bg-institutional-gold/20 hover:text-institutional-blue transition-colors">Nuestro Liceo</a>
+            <a href="/el-liceo/historia" class="block px-4 py-2.5 text-sm text-dark hover:bg-institutional-gold/20 hover:text-institutional-blue transition-colors">Historia</a>
+            <a href="/el-liceo/mision-vision" class="block px-4 py-2.5 text-sm text-dark hover:bg-institutional-gold/20 hover:text-institutional-blue transition-colors">Misión y Visión</a>
+            <a href="/el-liceo/proyecto-educativo" class="block px-4 py-2.5 text-sm text-dark hover:bg-institutional-gold/20 hover:text-institutional-blue transition-colors">Proyecto Educativo Institucional</a>
+            <a href="/el-liceo/reglamento-interno" class="block px-4 py-2.5 text-sm text-dark hover:bg-institutional-gold/20 hover:text-institutional-blue transition-colors">Reglamento Interno</a>
+            <a href="/el-liceo/infraestructura" class="block px-4 py-2.5 text-sm text-dark hover:bg-institutional-gold/20 hover:text-institutional-blue transition-colors">Infraestructura</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative group">
+        <button class="px-3 py-2 rounded-lg hover:bg-white/10 transition-colors flex items-center gap-1">
+          Comunidad Educativa
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
+        </button>
+        <div class="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 overflow-hidden">
+          <div class="py-1">
+            <span class="block px-4 py-1.5 text-xs font-semibold text-gray-400 uppercase tracking-wider">Funcionarios</span>
+            <a href="/comunidad-educativa/funcionarios/equipo-directivo" class="block px-4 py-2.5 text-sm text-dark hover:bg-institutional-gold/20 hover:text-institutional-blue transition-colors pl-8">Equipo Directivo</a>
+            <a href="/comunidad-educativa/funcionarios/docentes" class="block px-4 py-2.5 text-sm text-dark hover:bg-institutional-gold/20 hover:text-institutional-blue transition-colors pl-8">Docentes</a>
+            <a href="/comunidad-educativa/funcionarios/asistentes" class="block px-4 py-2.5 text-sm text-dark hover:bg-institutional-gold/20 hover:text-institutional-blue transition-colors pl-8">Asistentes de la Educación</a>
+            <hr class="mx-4 my-1 border-gray-200" />
+            <a href="/comunidad-educativa/abanderados" class="block px-4 py-2.5 text-sm text-dark hover:bg-institutional-gold/20 hover:text-institutional-blue transition-colors">Abanderados 2026</a>
+            <a href="/comunidad-educativa/centro-padres" class="block px-4 py-2.5 text-sm text-dark hover:bg-institutional-gold/20 hover:text-institutional-blue transition-colors">Centro General de Padres</a>
+            <a href="/comunidad-educativa/centro-alumnos" class="block px-4 py-2.5 text-sm text-dark hover:bg-institutional-gold/20 hover:text-institutional-blue transition-colors">Centro de Alumnos</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative group">
+        <button class="px-3 py-2 rounded-lg hover:bg-white/10 transition-colors flex items-center gap-1">
+          Área Académica
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
+        </button>
+        <div class="absolute top-full left-0 mt-1 w-56 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 overflow-hidden">
+          <div class="py-1">
+            <a href="/area-academica/uniforme" class="block px-4 py-2.5 text-sm text-dark hover:bg-institutional-gold/20 hover:text-institutional-blue transition-colors">Uniforme</a>
+            <a href="/area-academica/niveles" class="block px-4 py-2.5 text-sm text-dark hover:bg-institutional-gold/20 hover:text-institutional-blue transition-colors">Niveles</a>
+            <a href="/area-academica/calendario" class="block px-4 py-2.5 text-sm text-dark hover:bg-institutional-gold/20 hover:text-institutional-blue transition-colors">Calendario Escolar</a>
+            <a href="/area-academica/documentos" class="block px-4 py-2.5 text-sm text-dark hover:bg-institutional-gold/20 hover:text-institutional-blue transition-colors">Documentos</a>
+          </div>
+        </div>
+      </div>
+
+      <a href="/noticias" class={`px-3 py-2 rounded-lg hover:bg-white/10 transition-colors ${currentPath.startsWith('/noticias') ? 'text-institutional-gold' : ''}`}>Noticias</a>
+      <a href="/galeria" class={`px-3 py-2 rounded-lg hover:bg-white/10 transition-colors ${currentPath === '/galeria' ? 'text-institutional-gold' : ''}`}>Galería</a>
+      <a href="/matricula" class={`px-3 py-2 rounded-lg hover:bg-white/10 transition-colors ${currentPath === '/matricula' ? 'text-institutional-gold' : ''}`}>Matrículas</a>
+      <a href="/contacto" class={`px-3 py-2 rounded-lg hover:bg-white/10 transition-colors ${currentPath === '/contacto' ? 'text-institutional-gold' : ''}`}>Contacto</a>
+    </nav>
+  </div>
+</header>

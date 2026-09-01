@@ -1,0 +1,81 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Nuestro Liceo - Liceo San José del Carmen">
+  <div class="min-h-screen flex flex-col">
+    <Header currentPath={Astro.url.pathname} />
+    <main class="flex-1">
+      <div class="bg-gradient-to-r from-institutional-blue to-institutional-blue-dark text-white py-16">
+        <div class="max-w-4xl mx-auto px-4">
+          <nav class="text-sm text-white/60 mb-4">
+            <a href="/" class="hover:text-white">Inicio</a>
+            <span class="mx-2">/</span>
+            <span class="text-white/80">El Liceo</span>
+            <span class="mx-2">/</span>
+            <span class="text-institutional-gold">Nuestro Liceo</span>
+          </nav>
+          <h1 class="text-4xl font-bold">Nuestro Liceo</h1>
+        </div>
+      </div>
+      <div class="max-w-4xl mx-auto px-4 py-12">
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">
+          El <strong>Liceo San José del Carmen</strong> tiene sus raíces en una pequeña escuela particular que funcionaba a comienzos del siglo XX 
+          frente al actual Museo Histórico de San José del Carmen, en el Valle del Huique. Con el paso de los años, esta escuela se transformó en la 
+          Escuela Pública N.º 55, iniciando un proceso de crecimiento sostenido que la convertiría en uno de los establecimientos educacionales 
+          más importantes de la comuna de Palmilla.
+          <br><br>
+          Durante décadas, la comunidad educativa trabajó incansablemente para ampliar las oportunidades de aprendizaje de niños y jóvenes provenientes 
+          de distintos sectores rurales. Gracias al compromiso de docentes, familias y vecinos, se incorporaron nuevas salas de clases, programas de apoyo 
+          estudiantil, talleres formativos y mejores condiciones para el desarrollo integral de los alumnos.
+          <br><br>
+          En 1945, el establecimiento alcanzó la categoría de Escuela Quinta de Primera Clase, convirtiéndose en una institución pionera en el ámbito de la 
+          ducación rural. Posteriormente, la creación de los niveles de séptimo y octavo básico, junto con la apertura de la educación media en 1981, permitió 
+          ampliar significativamente la cobertura educativa en el sector.
+          <br><br>
+          En 1980 la escuela se trasladó a su actual ubicación, en el centro de la localidad de San José del Carmen, contando con modernas instalaciones que 
+          respondían al crecimiento de la matrícula y a las nuevas necesidades de la comunidad. Ese mismo período marcó el inicio de importantes avances, 
+          como la implementación de un internado y la consolidación de la educación media.
+          <br><br>
+          Un hito fundamental en su trayectoria ocurrió el 22 de mayo de 1995, cuando la Escuela E-295 adoptó oficialmente el nombre de Liceo San José del Carmen, 
+          denominación que mantiene hasta la actualidad.
+          <br><br>
+          Hoy, el Liceo San José del Carmen continúa honrando su historia y tradiciones, formando generaciones de estudiantes con una educación integral, inclusiva 
+          y de calidad. Su legado, construido a lo largo de más de un siglo de servicio educativo, lo posiciona como un referente de formación y desarrollo para las 
+          familias de San José del Carmen, Palmilla y todo el Valle del Huique.
+        </p>
+<!-- 
+        <div class="grid md:grid-cols-2 gap-6 mb-12">
+          <div class="bg-gray-light rounded-xl p-6">
+            <h2 class="text-xl font-bold text-institutional-blue mb-3">Misión</h2>
+            <p class="text-gray-700">Formar integralmente a nuestros estudiantes, desarrollando sus capacidades intelectuales, 
+            habilidades sociales y valores espirituales, preparándolos para ser agentes de cambio en la sociedad.</p>
+          </div>
+          <div class="bg-gray-light rounded-xl p-6">
+            <h2 class="text-xl font-bold text-institutional-blue mb-3">Visión</h2>
+            <p class="text-gray-700">Ser una institución educativa de excelencia, reconocida por su calidad académica, 
+            su formación en valores y su compromiso con el desarrollo de una comunidad inclusiva y solidaria.</p>
+          </div>
+        </div>
+-->
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="text-center p-6">
+            <div class="text-4xl font-bold text-institutional-gold-dark mb-2">+90</div>
+            <p class="text-gray-600 font-medium">Años de Historia</p>
+          </div>
+          <div class="text-center p-6">
+            <div class="text-4xl font-bold text-institutional-gold-dark mb-2">+500</div>
+            <p class="text-gray-600 font-medium">Estudiantes</p>
+          </div>
+          <div class="text-center p-6">
+            <div class="text-4xl font-bold text-institutional-gold-dark mb-2">+50</div>
+            <p class="text-gray-600 font-medium">Funcionarios</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </div>
+</Layout>
